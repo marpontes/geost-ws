@@ -1,15 +1,3 @@
-/* **************************************************************
-   GEOST https://github.com/marpontes/geost-ws
-   author: @marpontes
-   ==============================================================
-   
-   This app is a web-service layer over the GEOST
-   database.
-   
-   package.js - information and dependencies
-   
-   ************************************************************** */
-
 {
   "name": "geost-ws",
   "version": "0.1.0",
