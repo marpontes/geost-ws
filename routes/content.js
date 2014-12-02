@@ -28,7 +28,7 @@ function ContentHandler (db) {
             "use strict";
 
             if (err) return next(err);
-
+            if(!bucket) return res.send("{}");
             return res.send(bucket);
         });
     }
