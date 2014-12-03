@@ -44,7 +44,7 @@ function BucketsDAO(db) {
     
     this.getCep = function(cepQuery,callback) {
         "use strict";
-		ceps.find(
+		ceps.findOne(
 		  {"_id" :  cepQuery}, 
 		  function(err, cep) {
               console.log(cep);
