@@ -44,7 +44,7 @@ function BucketsDAO(db) {
     
     this.getCep = function(cep,callback) {
         "use strict";
-        console.log(cep);
+        console.log(cep.toString());
 		ceps.find(
 		  {_id: cep}, 
 		  function(err, bucket) {
