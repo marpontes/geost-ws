@@ -47,6 +47,8 @@ function BucketsDAO(db) {
 		ceps.find(
 		  {"_id" :  cepQuery}, 
 		  function(err, cep) {
+              console.log(cep);
+              console.log(cepQuery);
 			  if (err){
 				return callback(err, null);
 			  }else{
