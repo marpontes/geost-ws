@@ -46,7 +46,7 @@ function BucketsDAO(db) {
         "use strict";
 		ceps.find(
 		  {"_id" :  cepQuery}, 
-		  function(err, bucket) {
+		  function(err, cep) {
 			  if (err){
 				return callback(err, null);
 			  }else{
