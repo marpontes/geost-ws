@@ -21,6 +21,7 @@ function BucketsDAO(db) {
     }
 
     var buckets = db.collection("buckets");
+    var ceps = db.collection("ceps");
 
     this.getAndLockBucket = function(callback) {
         "use strict";
@@ -39,7 +40,25 @@ function BucketsDAO(db) {
 		});
 
         
-    }
+    };
+    
+    this.getCep = function(cep,callback) {
+        "use strict";
+
+		ceps.find(
+		  {_id: cep}, 
+		  function(err, bucket) {
+			  if (err){
+				return callback(err, null);
+			  }else{
+				callback(err, bucket);
+			  }
+		});
+
+        
+    };
+    
+    
 
 
 }

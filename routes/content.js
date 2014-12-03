@@ -31,8 +31,21 @@ function ContentHandler (db) {
             if(!bucket) return res.send("{}");
             return res.send(bucket);
         });
-    }
-
+    };
+    
+    this.getCep = function(req, res, next){
+        "use strict";
+        
+        var cep = req.params.cep;
+        
+        buckets.getCep(cep,function(err,cep){
+            "use strict";
+            
+            if(err) return next(err);
+            if(!cep) return res.send("{}");
+            return res.send(cep);
+        });
+    };
 
    /*
     * shows out the 404 page
