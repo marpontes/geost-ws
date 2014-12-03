@@ -28,7 +28,7 @@ module.exports = exports = function(app, db) {
     app.get("/getandlockbucket", contentHandler.getAndLockBucket);
     //app.get("/getuf/:uf", contentHandler.getAndLockBucket);
     //app.get("/getcidade/:cidade", contentHandler.getAndLockBucket);
-    app.get("/getcep/:cep", contentHandler.getCep);
+    app.get("/getcep/:cepQuery", contentHandler.getCep);
     
     //app.get("/lockuf/:host", contentHandler.getAndLockBucket);
     //app.get("/lockcidade/:host", contentHandler.getAndLockBucket);

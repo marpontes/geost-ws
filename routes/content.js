@@ -36,9 +36,9 @@ function ContentHandler (db) {
     this.getCep = function(req, res, next){
         "use strict";
         
-        var cep = req.params.cep;
+        var cepQuery = req.params.cepQuery;
         
-        buckets.getCep(cep,function(err,cep){
+        buckets.getCep(cepQuery,function(err,cep){
             "use strict";
             
             if(err) return next(err);
